@@ -4,7 +4,6 @@
 # A seguir inluímos toda uma estrutura de rotina noturna utilizando estruturas de repetição 
 
 
-import time #biblioteca com função para dar uma pausa no jogo
 import random  #biblioteca com funçao para gerar um número aleatório
 
 class Evento:   #criando a classe "Evento" para os eventos aleatórios do meio do dia
@@ -27,8 +26,8 @@ class EventoSorte(Evento):  #criando uma subclasse chamada "evento sorte" para o
             achado = 50
             self.presente = achado
         elif self.numero == 3:
-            print("Os casos de violência aumentaram e você foi assaltado!!")
-            self.presente = -50 
+            print("Você ganhou uma bonificação no trabalho!!")
+            self.presente = 100
             return self.presente
 
 class EventoAzar(Evento):  #criando uma subclasse "evento Azar" para o evento em que ele perde dinheiro
@@ -76,7 +75,7 @@ class Personagem:
         self.fome = True
         self.medicado = False
 
-class PersonagemNoite (Personagem):  #criando uma subclasse para o Personagem da Noite
+class PersonagemNoite (Personagem):  #criando uma subclasse para o Personagem noturno
     def __init__(self):
         self.sujo = True
         self.fome = True
